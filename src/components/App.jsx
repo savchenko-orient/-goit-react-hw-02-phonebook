@@ -3,6 +3,7 @@ import { nanoid } from 'nanoid';
 import ContactsList from './ContactsList/ContactsList';
 import ContactsForm from './ContactsForm/ContactsForm';
 import Filter from './Filter/Filter';
+
 const DEFAULT_STATE = {
   contacts: [
     { id: 'id-1', name: 'Eden Clements', number: '645-17-79' },
@@ -19,9 +20,11 @@ export default class App extends Component {
       name,
       number,
     };
+
     const isHaveDublicateName = this.state.contacts.find(
       contact => contact.name === name
     );
+
     if (isHaveDublicateName) {
       alert(`${name} is already in contacts`)
       return;
@@ -70,6 +73,6 @@ export default class App extends Component {
           contacts={filtredContacts}
         />
       </div>
-    );
+    )
   }
 };

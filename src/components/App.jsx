@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { nanoid } from 'nanoid';
 import ContactsList from './ContactsList/ContactsList';
 import ContactsForm from './ContactsForm/ContactsForm';
@@ -33,6 +33,7 @@ export default class App extends Component {
       contacts: [contact, ...contacts]
     }));
   };
+
   changeFilter = (e) => {
     this.setState({ filter: e.currentTarget.value });
   };

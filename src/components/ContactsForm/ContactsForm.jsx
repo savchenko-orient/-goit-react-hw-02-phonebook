@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
+import PropTypes from 'prop-types'
 
 const DEFAULT_STATE = {
   name: '',
@@ -12,12 +13,6 @@ class ContactForm extends Component {
     const { name, value } = e.currentTarget;
     this.setState({ [name]: value });
   };
-
-  // handleNumberChange = (e) => {
-  //   const { ,namevalue } = e.currentTarget.value;
-  //   this.setState({ [number]: value });
-  //   console.log(this.state);
-  // };
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -61,4 +56,9 @@ class ContactForm extends Component {
     );
   }
 }
+
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func
+}
+
 export default ContactForm;

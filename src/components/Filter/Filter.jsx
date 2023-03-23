@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Filter = ({ value, onChange, contactsCount }) => {
   return (
     <form >
@@ -15,5 +17,11 @@ const Filter = ({ value, onChange, contactsCount }) => {
     </form>
   )
 };
+
+Filter.propTypes = {
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+  contactsCount: PropTypes.number
+}
 
 export default Filter;
